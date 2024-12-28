@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     tags:
-      - "*"
+     - 'v*'
   workflow_dispatch:
 
 env:
@@ -18,9 +18,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - arch: x86_64
-            sdk_url_path: https://downloads.openwrt.org/releases/23.05.5/targets/x86/64
-            sdk_name: -sdk-23.05.5-x86-64_
+          - arch: ipq807x
+            sdk_url_path: https://downloads.openwrt.org/releases/23.05.5/targets/ipq807x/generic/
+            sdk_name: -sdk-23.05.5-ipq807x_
 
     env:
       SDK_URL_PATH: ${{ matrix.sdk_url_path }}
