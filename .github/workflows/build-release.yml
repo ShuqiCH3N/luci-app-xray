@@ -5,6 +5,11 @@ on:
     tags:
      - 'v*'
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to create'
+        required: true
+        default: 'v1.0.0'
 
 env:
   PACKAGE_NAME: luci-app-xray
