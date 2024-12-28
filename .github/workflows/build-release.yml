@@ -20,7 +20,7 @@ jobs:
         include:
           - arch: ipq807x
             sdk_url_path: https://downloads.openwrt.org/releases/23.05.5/targets/ipq807x/generic/
-            sdk_name: -sdk-23.05.5-ipq807x_
+            sdk_name: -sdk-23.05.5-ipq807x-
 
     env:
       SDK_URL_PATH: ${{ matrix.sdk_url_path }}
